@@ -1,9 +1,5 @@
-from reccobeats_queries.recco_ids import get_recco_ids
-from reccobeats_queries.track_info import get_track_info
-from reccobeats_queries.audio_features import get_audio_features
-from spotify_queries.playlist_query import get_spotify_playlist_ids
-from spotify_queries.album_query import get_spotify_album_ids
-from spotify_queries.track_query import get_spotify_track_id
+from reccobeats_queries import get_recco_ids, get_track_info, get_audio_features
+from spotify_queries import get_spotify_track_id, get_spotify_album_ids, get_spotify_playlist_ids
 
 # testing values
 playlist_id = '5s2yZcg1zP6gyX5h17AmX3'
