@@ -15,3 +15,5 @@ if __name__ == "__main__":
 
     for id in recco_id_list:
         print(get_track_info(id))
+        print(get_audio_features(id))
+        print("\n")

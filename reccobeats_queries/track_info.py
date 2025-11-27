@@ -5,9 +5,9 @@ headers = {
 }
 
 def get_track_info(id):
-    url = f'https://api.reccobeats.com/v1/track/{id}'
+    track_url = f'https://api.reccobeats.com/v1/track/{id}'
 
-    response = requests.get(url, headers=headers)
+    response = requests.get(track_url, headers=headers)
 
     if response.status_code == 200:
         track = response.json()
