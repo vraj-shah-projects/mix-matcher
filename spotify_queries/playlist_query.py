@@ -16,10 +16,12 @@ def get_playlist_length(playlist_id):
         return playlist_length
 
     else:
-        raise str(response.status_code) + "\nError in retrieving playlist."
+        print(str(response.status_code) + "\nError in retrieving playlist from Spotify.")
+        raise RuntimeError
 
 def get_spotify_playlist_ids(playlist_id):
 
+    print(query_headers)
     track_count = get_playlist_length(playlist_id)
     requests_needed = track_count // track_limit + 1
 
@@ -43,9 +45,7 @@ def get_spotify_playlist_ids(playlist_id):
                     pass
 
         else:
-            raise str(response.status_code) + "\nError in retrieving playlist tracks."
+            print(str(response.status_code) + "\nError in retrieving playlist tracks from Spotify.")
+            raise RuntimeError
 
-    #print(spotify_id_list)
-    #print("\n\n\n")
-    #print(len(spotify_id_list))
     return spotify_id_list

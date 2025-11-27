@@ -24,4 +24,5 @@ def get_track_info(id):
         return f"{title} by {artists}"
 
     else:
-        raise str(response.status_code) + "\nError in retrieving track info from ReccoBeats."
+        print(str(response.status_code) + "\nError in retrieving track info from ReccoBeats.")
+        raise RuntimeError

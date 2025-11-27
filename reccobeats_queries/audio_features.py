@@ -15,4 +15,5 @@ def get_audio_features(id):
         return audio_features
 
     else:
-        raise str(response.status_code) + f"\nError in retrieving audio features of track {id}"
+        print(str(response.status_code) + f"\nError in retrieving audio features of track {id}")
+        raise RuntimeError

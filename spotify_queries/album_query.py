@@ -16,7 +16,8 @@ def get_album_length(album_id):
         return album_length
 
     else:
-        raise str(response.status_code) + "\nError in retrieving album."
+        print(str(response.status_code) + "\nError in retrieving album from Spotify.")
+        raise RuntimeError
 
 def get_spotify_album_ids(album_id):
 
@@ -43,6 +44,7 @@ def get_spotify_album_ids(album_id):
                     pass
 
         else:
-            raise str(response.status_code) + "\nError in retrieving album tracks."
+            print(str(response.status_code) + "\nError in retrieving album tracks from Spotify.")
+            raise RuntimeError
 
     return spotify_id_list

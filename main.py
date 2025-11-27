@@ -7,9 +7,11 @@ album_id = '4SZko61aMnmgvNhfhgTuD3'
 track_id = '7lmeHLHBe4nmXzuXc0HDjk'
 
 if __name__ == "__main__":
-    #spotify_id_list = get_spotify_track_id(track_id)
+
+    #refresh_auth_token()
+    spotify_id_list = get_spotify_track_id(track_id)
     #spotify_id_list = get_spotify_album_ids(album_id)
-    spotify_id_list = get_spotify_playlist_ids(playlist_id)
+    #spotify_id_list = get_spotify_playlist_ids(playlist_id)
 
     if not spotify_id_list:
         raise "No valid IDs to parse."
