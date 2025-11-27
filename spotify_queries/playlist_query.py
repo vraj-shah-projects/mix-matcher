@@ -18,7 +18,7 @@ def get_playlist_length(playlist_id):
     else:
         raise str(response.status_code) + "\nError in retrieving playlist."
 
-def get_spotify_ids(playlist_id):
+def get_spotify_playlist_ids(playlist_id):
 
     track_count = get_playlist_length(playlist_id)
     requests_needed = track_count // track_limit + 1
