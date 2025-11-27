@@ -1,5 +1,5 @@
 from recco_ids import get_recco_ids
-from spotify_queries.playlist_query import get_spotify_ids
+from spotify_queries.playlist_query import get_playlist_length, get_spotify_ids
 
 playlist_id = '6xlO4TC7KFTnViplLjViWV'
 

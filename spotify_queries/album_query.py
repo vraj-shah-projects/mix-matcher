@@ -1,15 +1,11 @@
+'''
 import requests
-import os
-
-auth_token = os.getenv("AUTH_TOKEN")
-headers = {
-    'Authorization' : f'Bearer {auth_token}'
-}
+from credentials import query_headers
 
 album_id = '6pwuKxMUkNg673KETsXPUV'
 album_url = f'https://api.spotify.com/v1/albums/{album_id}/tracks?limit=50'
 
-response = requests.get(url=album_url, headers=headers)
+response = requests.get(url=album_url, headers=query_headers)
 
 if response.status_code == 200:
     tracks = response.json()
@@ -24,3 +20,4 @@ if response.status_code == 200:
             print(i)
 else:
     print(response.status_code)
+'''
