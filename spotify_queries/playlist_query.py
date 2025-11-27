@@ -16,8 +16,7 @@ def get_playlist_length(playlist_id):
         return playlist_length
 
     else:
-        return str(response.status_code) + "\nError in retrieving playlist."
-
+        raise str(response.status_code) + "\nError in retrieving playlist."
 
 def get_spotify_ids(playlist_id):
 
@@ -44,8 +43,9 @@ def get_spotify_ids(playlist_id):
                     pass
 
         else:
-            print(str(response.status_code) + "\nError in retrieving playlist tracks.")
+            raise str(response.status_code) + "\nError in retrieving playlist tracks."
 
-    print(spotify_id_list)
-    print(len(spotify_id_list))
+    #print(spotify_id_list)
+    #print("\n\n\n")
+    #print(len(spotify_id_list))
     return spotify_id_list
