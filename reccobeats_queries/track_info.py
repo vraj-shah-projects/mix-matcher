@@ -4,7 +4,7 @@ headers = {
     'Accept' : 'application/json'
 }
 
-def get_track_info(id):
+def get_recco_track_info(id):
     track_url = f'https://api.reccobeats.com/v1/track/{id}'
 
     response = requests.get(track_url, headers=headers)

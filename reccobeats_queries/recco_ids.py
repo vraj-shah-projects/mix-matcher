@@ -37,4 +37,6 @@ def get_recco_ids(spotify_id_list):
             print(str(response.status_code) + "\nError in retrieving IDs from ReccoBeats.")
             raise RuntimeError
 
+    if not recco_id_list:
+        print("Track(s) do not exist in ReccoBeats database. Could not retrieve ID(s).")
     return recco_id_list
