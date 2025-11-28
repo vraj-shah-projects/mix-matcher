@@ -1,25 +1,16 @@
 from reccobeats_queries import get_recco_ids, get_recco_track_info, get_audio_features
-from spotify_queries import get_type_id_from_link, get_spotify_track_id, get_spotify_track_info, get_spotify_album_ids, get_spotify_playlist_ids
+from spotify_queries import make_query, get_type_id_from_link, get_spotify_track_info
 
 # testing value
-test_link = 'https://open.spotify.com/album/4SZko61aMnmgvNhfhgTuD3?si=J7yUg2JpQC-Cu6WV6whd6A'
+test_link = 'https://open.spotify.com/track/0mEdbdeRFQwBhN4xfyIeUM?si=79a99154b0b542ea'
 
 if __name__ == "__main__":
 
     #refresh_auth_token()
     type, id = get_type_id_from_link(test_link)
-    print(f"Retrieving audio features from your {type}...")
+    print(f"Retrieving audio features from your {type}...\n")
 
-    match type:
-        case "track":
-            spotify_id_list = get_spotify_track_id(id)
-        case "album":
-            spotify_id_list = get_spotify_album_ids(id)
-        case "playlist":
-            spotify_id_list = get_spotify_playlist_ids(id)
-        case _:
-            print("Enter a valid Spotify URL.")
-            raise RuntimeError
+    spotify_id_list = make_query(type, id)
 
     if not spotify_id_list:
         print("No valid IDs to parse.")
