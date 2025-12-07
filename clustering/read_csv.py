@@ -6,5 +6,5 @@ parameters = ["acousticness", "danceability", "energy", "instrumentalness", "lou
 
 df = pd.read_csv(path)
 
-print(df.head())
+
 

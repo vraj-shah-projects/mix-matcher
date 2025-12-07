@@ -1,2 +1,5 @@
 # Protected credentials
 .env
+
+# Large data file
+.clustering.data.track_features.csv
