@@ -2,7 +2,7 @@ from reccobeats_queries import get_recco_ids, get_audio_features
 from spotify_queries import make_query, get_type_id_from_link, get_spotify_track_info
 
 # testing value
-test_link = 'https://open.spotify.com/artist/4ScCswdRlyA23odg9thgIO?si=f9710a96c2ea4ce6'
+test_link = 'https://open.spotify.com/track/7J1uxwnxfQLu4APicE5Rnj?si=dd8b2ac5d2e34e72'
 
 if __name__ == "__main__":
 
