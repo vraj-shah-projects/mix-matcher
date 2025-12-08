@@ -18,4 +18,4 @@ def refresh_auth_token():
     else:
         return str(response.status_code) + "\nCould not retrieve new access token."
 
-#refresh_auth_token()
+refresh_auth_token()
