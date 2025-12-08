@@ -1,3 +1,3 @@
 from .query import get_type_id_from_link, make_query
-from .queries import get_spotify_track_info
+from .queries import get_name_and_artists, format_track_desc
 #from .new_auth_token import refresh_auth_token
