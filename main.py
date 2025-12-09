@@ -1,5 +1,5 @@
-from reccobeats_queries import get_recco_ids, get_audio_features
-from spotify_queries import make_query, get_type_id_from_link, get_name_and_artists, format_track_desc
+from reccobeats_queries import get_recco_ids
+from spotify_queries import make_query, get_type_id_from_link
 from dataframes import build_dataframe
 
 # testing value
@@ -13,5 +13,5 @@ if __name__ == "__main__":
     recco_id_list = get_recco_ids(spotify_id_list)
  
     new_df = build_dataframe(recco_id_list)
-    print(new_df)
+    #print(new_df)
     #update_dataframe(new_df)

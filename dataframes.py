@@ -1,13 +1,7 @@
 import pandas as pd
 from reccobeats_queries import get_audio_features
 from spotify_queries import get_type_id_from_link, get_name_and_artists, format_track_desc
-from clustering import path, track_details, parameters
-
-path = r'clustering\data\tracks_features.pkl'
-
-# the info we want to keep in the dataframe for 
-track_details = ["id", "name" , "artists"]
-parameters = ["acousticness", "danceability", "energy", "instrumentalness", "loudness", "speechiness", "tempo", "valence"]
+from clustering import path, track_details, parameters, standardise
 
 def build_dataframe(recco_ids):
 
@@ -35,6 +29,7 @@ def build_dataframe(recco_ids):
     return df
     #return df[["name", "artists", "danceability", "energy", "valence"]]
 
-#def update_dataframe(new_df):
+def update_dataframe(new_df):
     # Read from current dataset in track_features.pkl, and combine dataframes
+    
         
