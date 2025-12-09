@@ -42,4 +42,4 @@ These audio features and their values will be used as the basis for clustering s
     valence (float between 0 and 1):
     measure of the emotional tone of the track, with lower values representing more mellow, melancholic songs, and higher values representing more joyful and cheery songs.
 
-Each track is stored in a Pandas dataframe with their Spotify ID (as a key) and the aforementioned parameters.
+Each track is stored in a Pandas dataframe with their Spotify ID, name, artists and the aforementioned parameters.

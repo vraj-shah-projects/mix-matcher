@@ -18,7 +18,7 @@ def get_name_and_artists(track_id):
         artist_count = len(track["artists"])
 
         for i in range(artist_count):
-            artists.append(track["artists"][i]["name"])
+            artists.append(f"'{track["artists"][i]["name"]}'")
 
         return name, artists
 

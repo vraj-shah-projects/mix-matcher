@@ -11,19 +11,19 @@ def make_query(type, id):
     match type:
         case "track":
             spotify_id_list = get_spotify_track_id(id)
-            query_message = f"Retrieving audio features from the {type}...\n"
+            query_message = f"\nRetrieving audio features from the {type}...\n"
 
         case "artist":
             spotify_id_list = get_spotify_artist_top_tracks_ids(id)
-            query_message = f"Retrieving audio features from the {type}'s top tracks...\n"
+            query_message = f"\nRetrieving audio features from the {type}'s top tracks...\n"
 
         case "album":
             spotify_id_list = get_spotify_album_ids(id)
-            query_message = f"Retrieving audio features from the {type}'s tracks...\n"
+            query_message = f"\nRetrieving audio features from the {type}'s tracks...\n"
             
         case "playlist":
             spotify_id_list = get_spotify_playlist_ids(id)
-            query_message = f"Retrieving audio features from your {type}'s tracks...\n"
+            query_message = f"\nRetrieving audio features from your {type}'s tracks...\n"
 
         case _:
             print("Enter a valid Spotify URL.")
