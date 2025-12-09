@@ -13,5 +13,5 @@ if __name__ == "__main__":
     recco_id_list = get_recco_ids(spotify_id_list)
  
     new_df = build_dataframe(recco_id_list)
-    #print(new_df)
+    print(new_df)
     #update_dataframe(new_df)

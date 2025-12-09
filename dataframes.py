@@ -31,5 +31,11 @@ def build_dataframe(recco_ids):
 
 def update_dataframe(new_df):
     # Read from current dataset in track_features.pkl, and combine dataframes
-    
+    try:
+        current_df = pd.read_pickle(path)
+    except Exception:
+        current_df = pd.DataFrame()
+
+    df = pd.concat([current_df, new_df], ignore_index=True)
+    return df
         
