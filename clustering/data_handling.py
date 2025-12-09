@@ -9,7 +9,10 @@ parameters = ["acousticness", "danceability", "energy", "instrumentalness", "lou
 
 df = pd.read_csv(path)
 modified_df = df[track_details + parameters]
-print(modified_df.head())
+#print(modified_df.head())
+modified_df.to_pickle(r'clustering\data\tracks_features.pkl')
+pickle_df = pd.read_pickle(r'clustering\data\tracks_features.pkl')
+print(pickle_df.head())
 
 #def new_dataframe(ids, names, artists, audio_features):
 
