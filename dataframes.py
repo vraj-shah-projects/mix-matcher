@@ -33,9 +33,11 @@ def update_dataframe(new_df):
     # Read from current dataset in track_features.pkl, and combine dataframes
     try:
         current_df = pd.read_pickle(path)
-    except Exception:
+    except FileNotFoundError: # if the user is running the program for the first time
         current_df = pd.DataFrame()
 
-    df = pd.concat([current_df, new_df], ignore_index=True)
+    combined_df = pd.concat([current_df, new_df], ignore_index=True)
+    df = combined_df.drop_duplicates()
+    df.to_pickle(path)
+
     return df
-        
